@@ -62,13 +62,6 @@ spec:
         repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: main
         directories:
-          - path: vault
-        values:
-          namespace: vault
-    - git:
-        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-        revision: main
-        directories:
           - path: bind
         values:
           namespace: bind
@@ -87,20 +80,6 @@ spec:
           - path: coredns
         values:
           namespace: kube-systems
-    - git:
-        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-        revision: main
-        directories:
-          - path: pulsar/cluster
-        values:
-          namespace: pulsar
-    - git:
-        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-        revision: main
-        directories:
-          - path: etcd
-        values:
-          namespace: catcode
     - git:
         repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: main
