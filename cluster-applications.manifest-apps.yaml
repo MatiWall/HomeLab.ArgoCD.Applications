@@ -5,13 +5,7 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - git:
-        repoURL: 'https://github.com/MatiWall/application-values.git'
-        revision: master
-        directories:
-          - path: rabbitmq
-        values:
-          namespace: rabbitmq
+
   template:
     metadata:
       name: '{{ path.basename }}'
