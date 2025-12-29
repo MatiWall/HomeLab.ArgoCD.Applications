@@ -11,7 +11,7 @@ spec:
         directories:
           - path: apps
         values:
-          namespace: argoccd
+          namespace: argocd
   template:
     metadata:
       name: '{{ path.basename }}'
