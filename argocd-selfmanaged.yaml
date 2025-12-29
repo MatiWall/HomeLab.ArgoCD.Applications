@@ -1,31 +1,27 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cluster-applications-helm-apps-set
+  name: cluster-tools-manifest-apps-set
   namespace: argocd
 spec:
   generators:
-  - git:
-      revision: main
-      repoURL: https://github.com/MatiWall/application-values.git
-      directories:
-        - path: apps
-        #- path: drunkenbets-frontend
-      values:
-        namespace: argocd
+    - git:
+        repoURL: https://github.com/MatiWall/HomeLab.Kubernetes.ClusterConfig.git
+        revision: master
+        directories:
+          - path: apps
+        values:
+          namespace: argoccd
   template:
     metadata:
-      name: "{{ path.basename }}"
+      name: '{{ path.basename }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
-        server: https://kubernetes.default.svc
+        server: 'https://kubernetes.default.svc'
       project: default
       source:
-        repoURL: https://github.com/MatiWall/application-values.git
-        helm:
-          valueFiles:
-            - values.yaml
+        repoURL: https://github.com/MatiWall/HomeLab.Kubernetes.ClusterConfig.git
         path: '{{ path }}'
         targetRevision: HEAD
       syncPolicy:
@@ -34,3 +30,4 @@ spec:
           selfHeal: true
         syncOptions:
           - CreateNamespace=true
+
