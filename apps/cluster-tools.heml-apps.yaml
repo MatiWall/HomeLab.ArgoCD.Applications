@@ -16,13 +16,6 @@ spec:
       repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
       revision: main
       directories:
-        - path: vault-injector
-      values:
-        namespace: vault
-  - git:
-      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      revision: main
-      directories:
         - path: argo/workflow/argo-workflow
       values:
         namespace: argo
