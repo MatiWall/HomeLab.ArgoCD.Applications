@@ -23,7 +23,7 @@ spec:
       repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
       revision: main
       directories:
-        - path: rancher
+        - path: rancher 
       values:
         namespace: cattle-system
   template:

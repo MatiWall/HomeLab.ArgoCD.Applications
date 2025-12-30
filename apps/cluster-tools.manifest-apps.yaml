@@ -101,6 +101,13 @@ spec:
         - path: argo/cd
       values:
         namespace: argocd
+    - git:
+      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+      revision: main
+      directories:
+        - path: cert-manager
+      values:
+        namespace: cert-manager
   template:
     metadata:
       name: '{{ path.basename }}'
