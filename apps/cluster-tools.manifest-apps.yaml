@@ -88,6 +88,13 @@ spec:
         values:
           namespace: verdaccio
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: vaultwarden
+        values:
+          namespace: vaultwarden
+    - git:
       repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
       revision: main
       directories:
