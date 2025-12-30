@@ -120,6 +120,8 @@ spec:
         revision: main
         directories:
           - path: sealedsecrets 
+        values:
+          namespace: kube-system
   template:
     metadata:
       name: '{{ path.basename }}'
