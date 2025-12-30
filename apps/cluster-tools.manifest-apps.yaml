@@ -115,6 +115,11 @@ spec:
           - path: rancher 
         values:
           namespace: cattle-system
+    - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: sealedsecrets 
   template:
     metadata:
       name: '{{ path.basename }}'
