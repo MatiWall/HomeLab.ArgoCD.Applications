@@ -129,6 +129,13 @@ spec:
           - path: sealedsecrets-ui
         values:
           namespace: sealedsecrets
+    - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: cloudflare
+        values:
+          namespace: cloudflare
   template:
     metadata:
       name: '{{ path.basename }}'
