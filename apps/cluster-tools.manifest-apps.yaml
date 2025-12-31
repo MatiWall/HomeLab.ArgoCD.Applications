@@ -121,7 +121,14 @@ spec:
         directories:
           - path: sealedsecrets 
         values:
-          namespace: kube-system
+          namespace: sealedsecrets
+    - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: sealedsecrets-ui
+        values:
+          namespace: sealedsecrets
   template:
     metadata:
       name: '{{ path.basename }}'
