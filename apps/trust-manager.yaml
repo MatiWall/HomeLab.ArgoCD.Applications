@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://charts.jetstack.io
-    chart: cert-manager/trust-manager
+    repoURL: oci://quay.io/jetstack/charts
+    chart: trust-manager
     targetRevision: "0.20.3" # set the chart version you want
     helm:
       releaseName: trust-manager
