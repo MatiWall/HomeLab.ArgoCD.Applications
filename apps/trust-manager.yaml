@@ -8,6 +8,7 @@ spec:
   source:
     repoURL: oci://quay.io/jetstack/charts
     chart: trust-manager
+    targetRevision: v0.20.3
     helm:
       releaseName: trust-manager
       parameters: []
