@@ -16,8 +16,9 @@ spec:
         hostname: rancher.mw.local
         replicas: 1
         bootstrapPassword: MyPassword123
-        tls:
-          secretName: rancher-tls-secret
+        ingress:
+          tls:
+            secretName: rancher-tls-secret
 
   # Destination cluster and namespace
   destination:
