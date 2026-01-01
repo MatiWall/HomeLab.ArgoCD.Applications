@@ -13,9 +13,11 @@ spec:
     targetRevision: v2.13.1          # Rancher version
     helm:
       values: |                      # Optional: override values
-        hostname: rancher.local
+        hostname: rancher.mw.local
         replicas: 1
         bootstrapPassword: MyPassword123
+        tls:
+          secretName: rancher-tls-secret
 
   # Destination cluster and namespace
   destination:
