@@ -106,6 +106,7 @@ spec:
         revision: main
         directories:
           - path: cert-manager
+          - path: trust-manager
         values:
           namespace: cert-manager
     - git:
