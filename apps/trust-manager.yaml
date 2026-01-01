@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://charts.jetstack.io
+    repoURL: oci://quay.io/jetstack/charts
     chart: trust-manager
     helm:
       releaseName: trust-manager
