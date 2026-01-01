@@ -18,7 +18,9 @@ spec:
         bootstrapPassword: MyPassword123
         ingress:
           tls:
+            source: secret
             secretName: rancher-tls-secret
+        privateCA: true
 
   # Destination cluster and namespace
   destination:
