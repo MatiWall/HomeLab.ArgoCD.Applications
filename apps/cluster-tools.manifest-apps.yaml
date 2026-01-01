@@ -108,13 +108,13 @@ spec:
           - path: cert-manager
         values:
           namespace: cert-manager
-    - git:
-        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-        revision: main
-        directories:
-          - path: rancher 
-        values:
-          namespace: cattle-system
+#    - git:
+#        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+#        revision: main
+#        directories:
+#          - path: rancher 
+#        values:
+#          namespace: cattle-system
     - git:
         repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: main

@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rancher
+  namespace: argocd
+spec:
+  project: default
+
+  # Helm chart source
+  source:
+    repoURL: https://releases.rancher.com/server-charts/latest
+    chart: rancher
+    targetRevision: v2.13.1          # Rancher version
+    helm:
+      values: |                      # Optional: override values
+        hostname: rancher.local
+        replicas: 1
+        bootstrapPassword: MyPassword123
+
+  # Destination cluster and namespace
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cattle-system
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
