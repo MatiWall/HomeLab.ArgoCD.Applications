@@ -138,12 +138,12 @@ spec:
         values:
           namespace: cloudflare
     - git:
-      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      revision: main
-      directories:
-        - path: kubernetes-dashboard-extras
-      values:
-        namespace: kubernetes-dashboard
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: kubernetes-dashboard-extras
+        values:
+          namespace: kubernetes-dashboard
   template:
     metadata:
       name: '{{ path.basename }}'
