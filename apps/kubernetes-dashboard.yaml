@@ -15,7 +15,7 @@ spec:
       values: | 
         app:
           ingress:
-            enabled: true
+            enabled: false
             hosts:
               - kubernetes-dashboard.mw.local
   destination:
