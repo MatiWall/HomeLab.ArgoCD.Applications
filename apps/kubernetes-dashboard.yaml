@@ -13,13 +13,14 @@ spec:
     helm:
       releaseName: kubernetes-dashboard
       values: | 
-        ingress:
-          enabled: true
-          hosts:
-            - kubernetes-dashboard.mw.local
-          tls:
+        app:
+          ingress:
             enabled: true
-            secretName: kubernetes-dashboard-web-tls-secret
+            hosts:
+              - kubernetes-dashboard.mw.local
+            tls:
+              enabled: true
+              secretName: kubernetes-dashboard-web-tls-secret
   destination:
     server: https://kubernetes.default.svc
     namespace: kubernetes-dashboard
