@@ -18,9 +18,6 @@ spec:
             enabled: true
             hosts:
               - kubernetes-dashboard.mw.local
-            tls:
-              enabled: true
-              secretName: kubernetes-dashboard-web-tls-secret
   destination:
     server: https://kubernetes.default.svc
     namespace: kubernetes-dashboard
