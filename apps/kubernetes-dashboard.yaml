@@ -12,7 +12,15 @@ spec:
     targetRevision: "7.14.0"   # pick a version you want
     helm:
       releaseName: kubernetes-dashboard
-      parameters: []
+      values: | 
+        ingress:
+          enabled: true
+          hosts:
+            - kubernetes-dashboard.mw.local
+          tls:
+            - secretName: kubernetes-dashboard-web-tls-secret
+              hosts:
+                - kubernetes-dashboard.mw.local
   destination:
     server: https://kubernetes.default.svc
     namespace: kubernetes-dashboard
