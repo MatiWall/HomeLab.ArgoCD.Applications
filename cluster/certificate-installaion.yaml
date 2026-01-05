@@ -18,4 +18,27 @@ spec:
         - name: idle
           image: busybox
           command: ["/bin/sh", "-c", "--"]
-          args: ["while true; do sleep 30; done;"]
+          args: 
+            - | 
+              cp /tmp/secrets/local-root-ca.crt /usr/local/share/ca-certificates/local-root-ca.crt && \
+              update-ca-certificates && \
+              echo "Certificate installed" && \
+              sleep infinity
+          volumeMounts:
+            - name: certs
+              hostPath: /tmp/secrets/local-root-ca.crt
+              subPath: local-root-ca.crt
+            - name: host-certs
+              mountPath: /usr/local/share/ca-certificates
+              
+      volumes:
+        - name: certs
+          secret:
+            secretName: local-root-ca-secret
+            items:
+              - key: ca.crt
+                path: local-root-ca.crt
+        - name: host-certs
+          hostPath: 
+            path: /usr/local/share/ca-certificates
+            type: Directory
