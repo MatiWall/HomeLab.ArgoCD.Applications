@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: certificate-installer
+  namespace: cert-manager
+  labels:
+    app: certificate-installer
+spec:
+  selector:
+    matchLabels:
+      app: certificate-installer
+    template: 
+      metadata:
+        labels:
+          app: certificate-installer
+      spec:
+        containers:
+          - name: idle
+            image: busybox
