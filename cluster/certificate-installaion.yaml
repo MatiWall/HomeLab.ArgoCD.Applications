@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: idle
-          image: busybox
+          image: alpine:3.23.2
           command: ["/bin/sh", "-c", "--"]
           args: 
             - | 
