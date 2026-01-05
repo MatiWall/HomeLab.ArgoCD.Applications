@@ -21,7 +21,6 @@ spec:
           args: 
             - | 
               cp /tmp/secrets/local-root-ca.crt /usr/local/share/ca-certificates/local-root-ca.crt && \
-              update-ca-certificates && \
               echo "Certificate installed" && \
               sleep infinity
           volumeMounts:
