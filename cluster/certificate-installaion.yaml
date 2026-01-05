@@ -26,7 +26,7 @@ spec:
               sleep infinity
           volumeMounts:
             - name: certs
-              hostPath: /tmp/secrets/local-root-ca.crt
+              mountPath: /tmp/secrets/local-root-ca.crt
               subPath: local-root-ca.crt
             - name: host-certs
               mountPath: /usr/local/share/ca-certificates
