@@ -9,11 +9,11 @@ spec:
   selector:
     matchLabels:
       app: certificate-installer
-    template: 
-      metadata:
-        labels:
-          app: certificate-installer
-      spec:
-        containers:
-          - name: idle
-            image: busybox
+  template: 
+    metadata:
+      labels:
+        app: certificate-installer
+    spec:
+      containers:
+        - name: idle
+          image: busybox
