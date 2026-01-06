@@ -1,3 +1,5 @@
+# You will have to run "sudo update-ca-certificates" after installing the certificate on the nodes and possibly restart k3s.
+# Master node "sudo systemctl restart k3s" and worker nodes "sudo systemctl restart k3s-agent"
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -17,13 +19,12 @@ spec:
       containers:
         - name: idle
           image: alpine:3.23.2
-          command: ["/bin/bash", "-c", "--"]
+          command: ["/bin/sh", "-c", "--"]
           args: 
             - | 
               cp /tmp/secrets/local-root-ca.crt /usr/local/share/ca-certificates/local-root-ca.crt && \
               echo "Certificate installed" && \
               echo $NODE_NAME && \
-              update-ca-certificates && \
               sleep infinity
           env:
             - name: NODE_NAME
