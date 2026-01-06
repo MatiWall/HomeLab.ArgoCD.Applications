@@ -23,7 +23,7 @@ spec:
               cp /tmp/secrets/local-root-ca.crt /usr/local/share/ca-certificates/local-root-ca.crt && \
               echo "Certificate installed" && \
               echo $NODE_NAME && \
-              sudo update-ca-certificates && \
+              update-ca-certificates && \
               sleep infinity
           env:
             - name: NODE_NAME
