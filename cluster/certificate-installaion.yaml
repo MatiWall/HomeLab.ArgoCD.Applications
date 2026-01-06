@@ -17,7 +17,7 @@ spec:
       containers:
         - name: idle
           image: alpine:3.23.2
-          command: ["/bin/sh", "-c", "--"]
+          command: ["/bin/bash", "-c", "--"]
           args: 
             - | 
               cp /tmp/secrets/local-root-ca.crt /usr/local/share/ca-certificates/local-root-ca.crt && \
