@@ -8,6 +8,7 @@ metadata:
   labels:
     app: certificate-installer
 spec:
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: certificate-installer
