@@ -19,6 +19,13 @@ spec:
         - path: mwstack-authenticator
       values:
         namespace: mwstack-authenticator
+  - git:
+      revision: main
+      repoURL: https://github.com/MatiWall/application-values.git
+      directories:
+        - path: FitTracker/backend
+      values:
+        namespace: fittracker
 #  - git:
 #      revision: master
 #      repoURL: https://github.com/MatiWall/application-values.git
