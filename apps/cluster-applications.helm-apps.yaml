@@ -13,27 +13,19 @@ spec:
       values:
         namespace: pejzen
   - git:
-      revision: main
+      revision: master
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
         - path: mwstack/authenticator
       values:
         namespace: mwstack
   - git:
-      revision: main
+      revision: master
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
         - path: fittracker/fittracker-backend
       values:
         namespace: fittracker
-#  - git:
-#      revision: master
-#      repoURL: https://github.com/MatiWall/application-values.git
-#      directories:
-#        - path: "catcode/backend/*"
-#        - path: "catcode/frontend/*"
-#      values:
-#        namespace: catcode
   template:
     metadata:
       name: "{{ path.basename }}"
