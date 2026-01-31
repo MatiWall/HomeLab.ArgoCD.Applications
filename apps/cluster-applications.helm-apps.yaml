@@ -17,6 +17,7 @@ spec:
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
         - path: mwstack/authenticator
+        - path: mwstack/webhook-forwarder
       values:
         namespace: mwstack
   - git:
