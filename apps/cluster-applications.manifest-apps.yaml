@@ -7,7 +7,7 @@ spec:
   generators:
     - git:
         revision: master
-        repoURL: https://github.com/MatiWall/application-values.git
+        repoURL: https://github.com/MatiWall/HomeLab.ClusterApplications.Manifests.git
         directories:
           - path: mwstack/webhook-forwarder
         values:
