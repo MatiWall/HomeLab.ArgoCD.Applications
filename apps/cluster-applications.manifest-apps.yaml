@@ -7,7 +7,6 @@ spec:
   generators:
   - git:
       revision: main
-      repoURL: https://github.com/MatiWall/HomeLab.ClusterApplications.Manifests.git
       directories:
         - path: mwstack/webhook-forwarder-extras
       values:
@@ -21,7 +20,7 @@ spec:
         server: 'https://kubernetes.default.svc'
       project: default
       source:
-        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        repoURL: https://github.com/MatiWall/HomeLab.ClusterApplications.Manifests.git
         path: '{{ path }}'
         targetRevision: HEAD
       syncPolicy:
