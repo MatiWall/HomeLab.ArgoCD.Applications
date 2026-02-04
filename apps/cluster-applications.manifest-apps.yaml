@@ -9,7 +9,7 @@ spec:
         revision: main
         repoURL: https://github.com/MatiWall/HomeLab.ClusterApplications.Manifests.git
         directories:
-          - path: mwstack/webhook-forwarder
+          - path: mwstack/webhook-forwarder-extras
         values:
           namespace: mwstack
   template:
