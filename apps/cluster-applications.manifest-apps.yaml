@@ -5,13 +5,13 @@ metadata:
   namespace: argocd
 spec:
   generators:
-    - git:
-        revision: main
-        repoURL: https://github.com/MatiWall/HomeLab.ClusterApplications.Manifests.git
-        directories:
-          - path: mwstack/webhook-forwarder-extras
-        values:
-          namespace: mwstack
+  - git:
+      revision: main
+      repoURL: https://github.com/MatiWall/HomeLab.ClusterApplications.Manifests.git
+      directories:
+        - path: mwstack/webhook-forwarder-extras
+      values:
+        namespace: mwstack
   template:
     metadata:
       name: '{{ path.basename }}'
