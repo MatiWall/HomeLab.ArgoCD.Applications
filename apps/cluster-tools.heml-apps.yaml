@@ -26,6 +26,13 @@ spec:
         - path: argo/events/argo-events
       values:
         namespace: argo
+  - git:
+      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+      revision: main
+      directories:
+        - path: rancher
+      values:
+        namespace: cattle-system
   template:
     metadata:
       name: '{{ path.basename }}'
