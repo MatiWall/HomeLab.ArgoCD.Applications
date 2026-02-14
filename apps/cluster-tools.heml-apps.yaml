@@ -31,6 +31,7 @@ spec:
       revision: main
       directories:
         - path: argo/image-updater/argo-image-updater
+        - path: argo/image-updater/argo-image-updater-configs
       values:
         namespace: argocd
   - git:
