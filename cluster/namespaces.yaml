@@ -9,6 +9,13 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
+  name: argocd # Already created, but adding label for trust manager
+  labels:
+    trust-manager/inject: "true"
+---
+apiVersion: v1
+kind: Namespace
+metadata:
   name: bind
 ---
 apiVersion: v1
