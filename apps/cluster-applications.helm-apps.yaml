@@ -14,7 +14,7 @@ spec:
         namespace: pejzen
   - git:
       revision: master
-      repoURL: https://github.com/MatiWall/application-values.git
+      repoURL: git@github.com:MatiWall/application-values.git
       directories:
         - path: mwstack/authenticator
         - path: mwstack/webhook-forwarder
