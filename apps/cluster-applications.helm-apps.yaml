@@ -7,14 +7,14 @@ spec:
   generators:
   - git:
       revision: master
-      repoURL: git@github.com:MatiWall/application-values.git
+      repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
       directories:
         - path: pejzen
       values:
         namespace: pejzen
   - git:
       revision: master
-      repoURL: git@github.com:MatiWall/application-values.git
+      repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
       directories:
         - path: mwstack/authenticator
         - path: mwstack/webhook-forwarder
@@ -22,7 +22,7 @@ spec:
         namespace: mwstack
   - git:
       revision: master
-      repoURL: git@github.com:MatiWall/application-values.git
+      repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
       directories:
         - path: fittracker/fittracker-backend
       values:
@@ -36,7 +36,7 @@ spec:
         server: https://kubernetes.default.svc
       project: default
       source:
-        repoURL: git@github.com:MatiWall/application-values.git
+        repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
         helm:
           valueFiles:
             - values.yaml
