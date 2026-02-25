@@ -21,13 +21,13 @@ spec:
         - path: mwstack/webhook-forwarder
       values:
         namespace: mwstack
-#  - git:
-#      revision: master
-#      repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
-#      directories:
-#        - path: fittracker/fittracker-backend
-#      values:
-#        namespace: fittracker
+  - git:
+      revision: master
+      repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
+      directories:
+        - path: fittracker/fittracker-backend
+      values:
+        namespace: fittracker
   template:
     metadata:
       name: "{{ path.basename }}"
