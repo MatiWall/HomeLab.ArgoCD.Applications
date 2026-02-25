@@ -17,7 +17,7 @@ spec:
       revision: master
       repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
       directories:
-   #     - path: mwstack/authenticator
+        - path: mwstack/authenticator
         - path: mwstack/webhook-forwarder
       values:
         namespace: mwstack
