@@ -26,6 +26,7 @@ spec:
       repoURL: ssh://git@github.com/MatiWall/HomeLab.Apps.ApplicationValues.git
       directories:
         - path: fittracker/fittracker-backend
+        - path: fittracker/fittracker-frontend
       values:
         namespace: fittracker
   template:
